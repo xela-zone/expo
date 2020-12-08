@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="container">
+  <h1 class="display-4">
+    {{ .Title }}
+  </h1>
+  <p class="lead">{{with .Params.lead}}{{ . }} -{{end}} {{ .ReadingTime }} min - {{.WordCount}} words</p>
+  <p>{{ .Content}}</p>
+</div>
+{{ end }}

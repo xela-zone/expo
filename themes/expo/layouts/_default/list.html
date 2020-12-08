@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="container">
+  <h1 class="text-center">
+    {{ .Type | humanize }}
+  </h1>
+  <div class="row">
+    {{ range .Pages }}
+    <div class="col-6 mt-2">
+      <a class="text-body" href="{{ .Permalink }}">{{ if .Draft }}DRAFT: {{end}}{{ .Title | markdownify }}</a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">{{.Title}}</h1>
+    <noscript>
+      <a href="booth">click here to go to the list of booths</a>
+    </noscript>
+    <div height="150px" id="mapContainer"></div>
+
+  </div>
+</div>
+<style>
+  #mapContainer {
+    height: 780px;
+  }
+</style>
+
+<script>
+  locations = [
+    {{ range .Site.RegularPages }}
+    {
+      name: "{{.Page.Title | safeJS}}",
+      lead: "{{.Page.Summary | safeJS}}",
+      truncated: {{.Page.Truncated | safeJS }},
+    link: "{{.Page.RelPermalink | safeJS }}",
+    coords: {{.Page.Params.coords | safeJS }}
+    },
+    {{ end }}
+  ]
+</script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin="" />
+<!--yes i know this is bad practice -->
+{{ $mainJs := resources.Get "js/main.js"| js.Build (dict "minify" false) }}
+<script type="module" src="{{ $mainJs.RelPermalink }}"></script>
+
+{{end}}
