@@ -1,24 +1,45 @@
+import * as params from '@params';
 import L from "leaflet";
 
+import { stringToColor, innerText } from "./utils.js"
 
+
+console.log(params)
 console.log(locations)
 console.log(locations.length)
 
-let mymap = L.map('mapContainer').setView(locations[0].coords, 14);
+let map = L.map('mapContainer', {
+  crs: L.CRS.Simple,
+  minZoom: -1,
+  zoomControl: false,
+  dragging: false,
+  touchZoom: false,
+  doubleClickZoom: false,
+  scrollWheelZoom: false,
+  keyboard: false
+})
+L.imageOverlay(params.image, [[0, 0], [12, 9]]).addTo(map)
 
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+map.fitBounds([[0, 0], [12, 9]]);
+
+
 
 locations.forEach(location => {
   console.log(`adding ${location.name}..`)
-  L.marker(location.coords).bindPopup(`<b>${location.name}</b>\n\n${location.lead}\n<a href="${location.link}">read more</a>`).addTo(mymap)
+  let rect = L.rectangle(location.coords, { color: stringToColor(location.name) })
+  rect.bindPopup(innerText(location))
+  rect.bindTooltip(location.name, { permanent: true, direction: 'top' })
+  rect.addTo(map)
 })
 
-function onMapClick(e) {
-  console.log("You clicked the map at " + e.latlng);
-}
 
-mymap.on('click', onMapClick);
+
+map.on('click', e => console.log("You clicked the map at " + e.latlng));
+
+
+map.on("zoomend", e => {
+  if (zoom && map.getZoom() != zoom) {
+    map.setZoom(zoom);
+  }
+});

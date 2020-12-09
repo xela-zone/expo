@@ -1,6 +1,6 @@
 ---
 title: "Colony middle school"
-coords: "[61.608912, -149.219956]"
+coords: "[[0.556625, 0.46875], [4.7375, 2.375]]"
 summary: "short description here, will go on the map"
 ---
 
