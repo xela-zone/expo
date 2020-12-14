@@ -1,7 +1,7 @@
 import * as params from '@params';
 import L from "leaflet";
 
-import { stringToColor, innerText } from "./utils.js"
+import { stringToColor, innerText, pointToBox } from "./utils.js"
 
 
 console.log(params)
@@ -18,21 +18,21 @@ let map = L.map('mapContainer', {
   scrollWheelZoom: false,
   keyboard: false
 })
-L.imageOverlay(params.image, [[0, 0], [12, 9]]).addTo(map)
 
 
-map.fitBounds([[0, 0], [12, 9]]);
-
-
-
+let booths = L.featureGroup()
+let images = L.featureGroup()
 locations.forEach(location => {
   console.log(`adding ${location.name}..`)
-  let rect = L.rectangle(location.coords, { color: stringToColor(location.name) })
+  let rect = L.rectangle(pointToBox(location.coords), { color: stringToColor(location.name) })
   rect.bindPopup(innerText(location))
-  rect.bindTooltip(location.name, { permanent: true, direction: 'top' })
-  rect.addTo(map)
+  rect.bindTooltip(location.name, { permanent: true, direction: 'top' }).addTo(booths)
+  L.imageOverlay(params.image, rect.getBounds()).addTo(images)
 })
 
+booths.addTo(map)
+images.addTo(map)
+map.fitBounds(booths.getBounds());
 
 
 map.on('click', e => console.log("You clicked the map at " + e.latlng));

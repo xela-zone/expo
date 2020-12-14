@@ -18,4 +18,8 @@ function innerText(location) {
 }
 
 
-export { stringToColor, innerText }
+function pointToBox(coords, size = .49) {
+  return [[coords[0] - size, coords[1] - size], [coords[0] + size, coords[1] + size]]
+}
+
+export { stringToColor, innerText, pointToBox }

@@ -33,7 +33,7 @@
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
   crossorigin="" />
 <!--yes i know this is bad practice -->
-{{$mainImage := resources.Get "images/backdrop.png" }}
+{{$mainImage := resources.Get "images/each.png" }}
 {{$mainImage = $mainImage.RelPermalink }}
 {{ $mainJs := resources.Get "js/main.js"| js.Build (dict "minify" false "params" (dict "image" $mainImage)) }}
 <script type="module" src="{{ $mainJs.RelPermalink }}"></script>
