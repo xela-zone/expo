@@ -1,0 +1,7 @@
+<footer class="footer mt-5">
+    <div class="container">
+        {{range where .Site.RegularPages "Section" "eq" "sponcers"}}
+        {{.Page.Title | safeHTML}}
+        {{end}}
+    </div>
+</footer>
