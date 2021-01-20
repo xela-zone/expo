@@ -14,7 +14,7 @@ function stringToColor(str) {
 }
 
 function innerText(location) {
-  return `<b>${location.name}</b><br><br>${location.lead}\n<a href="${location.link}">read more</a>`
+  return `<b>${location.name}</b><br><br>${location.lead}\n<a ">read more</a>`
 }
 
 
@@ -22,4 +22,23 @@ function pointToBox(coords, size = .49) {
   return [[coords[0] - size, coords[1] - size], [coords[0] + size, coords[1] + size]]
 }
 
-export { stringToColor, innerText, pointToBox }
+
+const contentRoot = document.getElementById("content")
+const map = document.getElementById("map")
+const BACK_ELEMENT = `<br><button type="button" class="btn btn-primary" onclick="showMap()">Return to Map</button>`
+async function loadPage(url) {
+  let page = await fetch(url)
+  contentRoot.innerHTML = await page.text()
+  contentRoot.innerHTML += BACK_ELEMENT
+  contentRoot.style.display = "block"
+  map.style.display = "none"
+}
+
+function showMap() {
+  contentRoot.style.display = "none"
+  map.style.display = "block"
+}
+
+window.showMap = showMap
+window.loadPage = loadPage
+export { stringToColor, innerText, pointToBox, loadPage, showMap };

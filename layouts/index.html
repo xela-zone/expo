@@ -1,17 +1,38 @@
 {{ define "main" }}
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="display-4">{{.Title}}</h1>
-    <noscript>
-      <a href="booth">click here to go to the list of booths</a>
-    </noscript>
-    <div height="150px" id="mapContainer"></div>
-
+<div class="container-fluid vh-100">
+  <h1 class="display-4">{{.Title}}</h1>
+  <div class="row ">
+    <div class="col-sm-12  col-lg-10">
+      <div class="row  ">
+        <div class="col-lg-2 col-sm-12">
+          <ul>
+            {{range where .Site.RegularPages "Section" "eq" "booth"}}
+            <li>
+              <a onclick="loadPage('{{.Page.RelPermalink | safeJS}}')">{{.Page.Title | safeJS}} </a>
+            </li>
+            {{end}}
+          </ul>
+        </div>
+        <div class=" col-lg-10">
+          <div id="map" class="">
+            <noscript>
+              <a href="booth">click here to go to the list of booths</a>
+            </noscript>
+          </div>
+          <div id="content" style="display:none"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-2">
+      sidebar
+    </div>
   </div>
+
 </div>
+
 <style>
-  #mapContainer {
-    height: 780px;
+  #map {
+    height: 760px;
   }
 </style>
 
