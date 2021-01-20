@@ -1,7 +1,24 @@
-<div class="container">
-  <h1 class="display-4">
-    {{ .Title }}
-  </h1>
-  <p class="lead">{{with .Params.lead}}{{ . }} -{{end}} {{ .ReadingTime }} min - {{.WordCount}} words</p>
-  <p>{{ .Content}}</p>
+<h1 class="display-4">
+  {{ .Title }}
+</h1>
+<p>{{ .Content}}</p>
+<div class="row ">
+  <div class="col-6 d-grid gap-2">
+
+    <button type="button" class="btn btn-primary" onclick="showMap()">back to map</button>
+  </div>
+  <div class="col-3 d-grid gap-2">
+
+    {{ with .NextInSection }}
+    <button type="button" class="btn btn-primary" onclick="loadPage('{{.RelPermalink | safeJS}}')">next
+      Booth</button>
+    {{end}}
+  </div>
+  <div class="col-3 d-grid gap-2">
+
+    {{ with .PrevInSection }}
+    <button type="button" class="btn btn-primary" onclick="loadPage('{{.RelPermalink | safeJS}}')">Previous
+      Booth</button>
+    {{end}}
+  </div>
 </div>
