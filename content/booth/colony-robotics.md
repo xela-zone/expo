@@ -2,15 +2,12 @@
 title: "Colony middle school"
 coords: "[0, 0]"
 summary: "short description here, will go on the map"
+embeds: 
+    - url: 'LgmxMuW6Fsc'
+      type: 'yt'
 ---
 
-{{< youtube "LgmxMuW6Fsc" >}}
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor tellus et mi faucibus iaculis. Ut quis massa ut est congue dictum sed et magna. Proin ullamcorper sodales ex ac aliquet. Sed facilisis massa eget est ultricies elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eu urna sit amet ipsum placerat ultrices eu eu felis. Nulla lacinia nisi augue, eget dictum eros dapibus sed.
-
-Phasellus ac ullamcorper augue. Suspendisse non ex urna. Maecenas a sollicitudin nisi. Aenean a luctus ex, ac tincidunt nibh. Nullam pretium ex nulla, imperdiet pellentesque justo bibendum eu. Nunc eu lacus at tellus fringilla rhoncus ut et purus. Sed varius est eget euismod bibendum. Vivamus sed efficitur nibh. Vivamus lobortis condimentum ipsum, ut faucibus turpis.
-
-Nulla facilisi. Sed sit amet lacus sem. Ut rutrum luctus malesuada. Praesent vitae dui a ex condimentum dapibus non id augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus tincidunt ipsum id diam congue, id tincidunt massa aliquet. Etiam malesuada nibh eget purus mollis, sed aliquet lectus porttitor. Sed in fringilla nisi.
 
 Pellentesque at leo tempor, molestie eros non, pellentesque diam. Integer lectus nunc, euismod vel turpis ut, viverra ullamcorper dolor. Donec blandit sit amet dui id faucibus. Proin vehicula mauris vitae felis finibus tempor. Etiam pulvinar feugiat est, at ultrices lectus efficitur volutpat. Aliquam sollicitudin nec lacus vitae aliquet. Morbi congue nec ante non faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 

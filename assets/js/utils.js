@@ -25,11 +25,9 @@ function pointToBox(coords, size = .49) {
 
 const contentRoot = document.getElementById("content")
 const map = document.getElementById("map")
-const BACK_ELEMENT = `<br><button type="button" class="btn btn-primary" onclick="showMap()">Return to Map</button>`
 async function loadPage(url) {
   let page = await fetch(url)
   contentRoot.innerHTML = await page.text()
-  contentRoot.innerHTML += BACK_ELEMENT
   contentRoot.style.display = "block"
   map.style.display = "none"
 }

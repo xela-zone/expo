@@ -4,6 +4,7 @@ import L from "leaflet";
 import * as utils from "./utils.js"
 
 
+
 console.log(params)
 console.log(locations)
 console.log(locations.length)
