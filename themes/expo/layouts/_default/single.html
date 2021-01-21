@@ -46,25 +46,28 @@
     {{end}}
 
   </div>
-  <div class="col-lg-4 col-sm-12">
+  <div class="col-lg-4 col-sm-12 mb-5">
     <p>{{ .Content}}</p>
   </div>
-  <div class="col-6 d-grid gap-2">
+  <div class="row position-fixed bottom-0 start-50 translate-middle-x">
 
-    <button type="button" class="btn btn-primary" onclick="showMap()">back to map</button>
-  </div>
-  <div class="col-3 d-grid gap-2">
+    <div class="col-6 d-grid gap-2">
 
-    {{ with .NextInSection }}
-    <button type="button" class="btn btn-secondary" onclick="loadPage('{{.RelPermalink | safeJS}}')">next
-      Booth</button>
-    {{end}}
-  </div>
-  <div class="col-3 d-grid gap-2">
+      <button type="button" class="btn btn-primary" onclick="showMap()">back to map</button>
+    </div>
+    <div class="col-3 d-grid gap-2">
 
-    {{ with .PrevInSection }}
-    <button type="button" class="btn btn-secondary" onclick="loadPage('{{.RelPermalink | safeJS}}')">Previous
-      Booth</button>
-    {{end}}
+      {{ with .NextInSection }}
+      <button type="button" class="btn btn-secondary" onclick="loadPage('{{.RelPermalink | safeJS}}')">next
+        Booth</button>
+      {{end}}
+    </div>
+    <div class="col-3 d-grid gap-2">
+
+      {{ with .PrevInSection }}
+      <button type="button" class="btn btn-secondary" onclick="loadPage('{{.RelPermalink | safeJS}}')">Previous
+        Booth</button>
+      {{end}}
+    </div>
   </div>
 </div>
