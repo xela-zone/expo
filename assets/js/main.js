@@ -2,7 +2,7 @@ import * as params from '@params';
 import L from "leaflet";
 
 import * as utils from "./utils.js"
-
+import store from "./store.js"
 
 
 console.log(params)
@@ -46,3 +46,15 @@ map.on("zoomend", e => {
     map.setZoom(zoom);
   }
 });
+
+
+//  init code for page, will reload the base if no # in url, otherwise use # route to preload the state
+if (window.location.hash) {
+  if (window.location.hash == "#") {
+    window.history.replaceState(store.State, 'Home Page', '#')
+  } else {
+    loadPage(window.location.hash.substr(1))
+    console.log(`loaded ${window.location.hash.substr(1)}`)
+    window.history.replaceState(store.State, null, `#${window.location.hash.substr(1)}`)
+  }
+}

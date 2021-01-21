@@ -41,10 +41,8 @@
     {{ range where .Site.RegularPages  "Section"  "==" "booth" }}
     {
       name: "{{.Page.Title | safeJS}}",
-      lead: "{{.Page.Summary | safeJS}}",
-      truncated: {{.Page.Truncated | safeJS }},
-    link: "{{.Page.RelPermalink | safeJS }}",
-    coords: {{.Page.Params.coords | safeJS }}
+      link: "{{.Page.RelPermalink | safeJS }}",
+      coords: {{.Page.Params.coords | safeJS }}
     },
     {{ end }}
   ]

@@ -1,4 +1,4 @@
-
+import store from './store.js';
 
 function stringToColor(str) {
   var hash = 0;
@@ -25,18 +25,52 @@ function pointToBox(coords, size = .49) {
 
 const contentRoot = document.getElementById("content")
 const map = document.getElementById("map")
-async function loadPage(url) {
+function loadPage(url) {
+  store.commit('page', url)
+}
+
+async function _loadPage(url) {
+  if (url == "/") {
+    contentRoot.style.display = "none"
+    map.style.display = "block"
+    return
+  }
   let page = await fetch(url)
-  contentRoot.innerHTML = await page.text()
-  contentRoot.style.display = "block"
-  map.style.display = "none"
+  if (page.ok) {
+    contentRoot.innerHTML = await page.text()
+    contentRoot.style.display = "block"
+    map.style.display = "none"
+  } else {
+    store.commit('page', '/')
+  }
+}
+
+store.subscribe('page', _loadPage)
+
+store.subscribe('page', (url) => {
+  if (url == "/") {
+    window.history.pushState(store.State, null, "#")
+  }
+  window.history.pushState(store.State, null, `#${url}`)
+})
+
+
+window.onpopstate = (event) => {
+  if (event.state) {
+    console.log(event.state)
+    store.State['page'] = event.state['page']
+    _loadPage(event.state['page'])
+  }
 }
 
 function showMap() {
-  contentRoot.style.display = "none"
-  map.style.display = "block"
+  store.commit('page', '/')
 }
+
+
 
 window.showMap = showMap
 window.loadPage = loadPage
+
+
 export { stringToColor, innerText, pointToBox, loadPage, showMap };
