@@ -13,6 +13,7 @@ embeds:
       type: 'image'
       alt: "a dog"
 
+featured: false
 ---
 
 {{< youtube "YTVID HERE" >}}

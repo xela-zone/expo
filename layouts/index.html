@@ -24,7 +24,14 @@
       </div>
     </div>
     <div class="col-sm-12 col-lg-2">
-      sidebar
+      {{ range first 3 (where (where .Site.RegularPages "Type" "eq" "booth") ".Params.featured" "=" true) }}
+      <div role=button class="card" onclick="loadPage({{.RelPermalink}})">
+        {{range first 1 (where .Params.embeds "type" "eq" "image")}}
+        <img src="{{.url}}" alt="{{.alt}}" class="card-img-top">
+        {{end}}
+        <h5 class="card-title">{{.Title}}</h5>
+      </div>
+      {{end}}
     </div>
   </div>
 
