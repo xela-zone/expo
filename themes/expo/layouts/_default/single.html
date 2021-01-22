@@ -1,9 +1,6 @@
-<div class="row ">
-  <h1 class="col-12 display-4">
-    {{ .Title }}
-  </h1>
+<div class="row m-0">
   {{with .Params.embeds}}
-  <div class="col-lg-8 col-sm-12">
+  <div class="col-lg-7 col-sm-12">
     <div id="carosell" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
       <div class="carousel-inner">
         {{ $times := 0}}
@@ -40,10 +37,11 @@
     {{end}}
 
   </div>
-  <div class="col-lg-4 col-sm-12  mb-5">
+  <div class="col-lg-5 col-sm-12 mb-5">
+    <h5>{{.Params.Title}}</h5>
     <p>{{ .Content}}</p>
   </div>
-  <div class="row position-fixed pb-2 bottom-0 start-50 translate-middle-x" style="z-index: 1100;">
+  <!-- <div class="row position-fixed pb-2 bottom-0 start-50 translate-middle-x" style="z-index: 1100;"> -->
 
     <div class="col-6 d-grid gap-2">
 
@@ -62,6 +60,6 @@
       <button type="button" class="btn btn-secondary btn-sm" onclick="loadPage('{{.RelPermalink | safeJS}}')">Previous
         Booth</button>
       {{end}}
-    </div>
+    <!-- </div> -->
   </div>
 </div>
