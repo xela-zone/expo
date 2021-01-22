@@ -13,10 +13,6 @@ function stringToColor(str) {
   return colour;
 }
 
-function innerText(location) {
-  return `<b>${location.name}</b><br><br>${location.lead}\n<a ">read more</a>`
-}
-
 
 function pointToBox(coords, size = .49) {
   return [[coords[0] - size, coords[1] - size], [coords[0] + size, coords[1] + size]]
@@ -45,13 +41,15 @@ async function _loadPage(url) {
   }
 }
 
+
 store.subscribe('page', _loadPage)
 
 store.subscribe('page', (url) => {
   if (url == "/") {
     window.history.pushState(store.State, null, "#")
+  } else {
+    window.history.pushState(store.State, null, `#${url}`)
   }
-  window.history.pushState(store.State, null, `#${url}`)
 })
 
 
@@ -73,4 +71,4 @@ window.showMap = showMap
 window.loadPage = loadPage
 
 
-export { stringToColor, innerText, pointToBox, loadPage, showMap };
+export { stringToColor, pointToBox, loadPage, showMap };
