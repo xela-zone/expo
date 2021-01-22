@@ -23,7 +23,8 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 col-lg-2">
+    <div class="col-sm-12 col-lg-2 mb-5">
+      <h3>Featured Booths</h3>
       {{ range first 3 (where (where .Site.RegularPages "Type" "eq" "booth") ".Params.featured" "=" true) }}
       <div role=button class="card" onclick="loadPage({{.RelPermalink}})">
         {{range first 1 (where .Params.embeds "type" "eq" "image")}}

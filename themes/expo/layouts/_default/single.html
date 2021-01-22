@@ -22,50 +22,44 @@
               title="YouTube Video"></iframe>
           </div>
         </div>
-        <style>
-          .carousel-control-prev,
-          .carousel-control-next {
-            height: 100px;
-            margin-top: 150px;
-          }
-        </style>
         {{end}}
         {{end}}
       </div>
-      {{if gt $times 1 }}
-      <a class="carousel-control-prev" href="#carosell" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carosell" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      {{end}}
     </div>
+    {{if gt $times 1 }}
+    <div class="d-flex justify-content-between pt-3">
+    
+      <a class="btn btn-primary" href="#carosell" role="button" data-bs-slide="prev">
+          <span class="sr-only">Previous</span>
+        </a>
+          <a class="btn btn-primary" href="#carosell" role="button" data-bs-slide="next">
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      {{end}}
     {{end}}
 
   </div>
-  <div class="col-lg-4 col-sm-12 mb-5">
+  <div class="col-lg-4 col-sm-12  mb-5">
     <p>{{ .Content}}</p>
   </div>
-  <div class="row position-fixed bottom-0 start-50 translate-middle-x">
+  <div class="row position-fixed pb-2 bottom-0 start-50 translate-middle-x" style="z-index: 1100;">
 
     <div class="col-6 d-grid gap-2">
 
-      <button type="button" class="btn btn-primary" onclick="showMap()">back to map</button>
+      <button type="button" class="btn btn-primary btn-sm" onclick="showMap()">back to map</button>
     </div>
     <div class="col-3 d-grid gap-2">
 
       {{ with .NextInSection }}
-      <button type="button" class="btn btn-secondary" onclick="loadPage('{{.RelPermalink | safeJS}}')">next
+      <button type="button" class="btn btn-secondary btn-sm" onclick="loadPage('{{.RelPermalink | safeJS}}')">next
         Booth</button>
       {{end}}
     </div>
     <div class="col-3 d-grid gap-2">
 
       {{ with .PrevInSection }}
-      <button type="button" class="btn btn-secondary" onclick="loadPage('{{.RelPermalink | safeJS}}')">Previous
+      <button type="button" class="btn btn-secondary btn-sm" onclick="loadPage('{{.RelPermalink | safeJS}}')">Previous
         Booth</button>
       {{end}}
     </div>
