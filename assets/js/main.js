@@ -58,3 +58,23 @@ if (window.location.hash) {
     window.history.replaceState(store.State, null, `#${window.location.hash.substr(1)}`)
   }
 }
+
+let featuredTemplate = document.getElementById('templateFeatured')
+
+let filtered = locations.filter(e => e.hasOwnProperty('img'))
+utils.shuffleArray(filtered)
+for (let i = 0; i < Math.min(3, filtered.length); i++) {
+  let clone = featuredTemplate.cloneNode(true)
+
+  clone.id = null
+  let nodes = Array.from(clone.childNodes)
+  let img = nodes.find(elm => elm.nodeName == "IMG")
+  img.src = filtered[i].img
+  img.alt = filtered[i].alt
+  let text = nodes.find(elm => elm.nodeName == "H5")
+  text.innerText = filtered[i].name
+
+  clone.onClick = utils.loadPage(filtered[i].url)
+  clone.style.display = "Block"
+  featuredTemplate.parentNode.append(clone)
+}

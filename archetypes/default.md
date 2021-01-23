@@ -12,8 +12,6 @@ embeds:
     - url: "https://i.redd.it/343ku4pfxjc61.jpg"
       type: 'image'
       alt: "a dog"
-
-featured: false
 ---
 
 {{< youtube "YTVID HERE" >}}

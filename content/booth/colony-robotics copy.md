@@ -12,8 +12,6 @@ embeds:
     - url: "https://i.redd.it/343ku4pfxjc61.jpg"
       type: 'image'
       alt: "a dog"
-
-featured: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor tellus et mi faucibus iaculis. Ut quis massa ut est congue dictum sed et magna. Proin ullamcorper sodales ex ac aliquet. Sed facilisis massa eget est ultricies elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eu urna sit amet ipsum placerat ultrices eu eu felis. Nulla lacinia nisi augue, eget dictum eros dapibus sed.
