@@ -20,7 +20,7 @@
               <a href="booth">click here to go to the list of booths</a>
             </noscript>
           </div>
-          <div id="content" class="p-0 overflow-auto" style="display:none; min-height: 0"></div>
+          <div id="content" style="display:none; min-height: 0"></div>
         </div>
         <div class="col-lg-2 col-12 order-lg-3 invisable"></div>
         <div class="col-12 col-lg-10  p-2 order-3 order-lg-4" id="sponsorRoot">
@@ -39,9 +39,12 @@
 </div>
 
 <style>
+@media (min-width: 992px) { 
   #map,
   #content {
     height: 760px;
+    max-height: 760px;
+   }
   }
 </style>
 
