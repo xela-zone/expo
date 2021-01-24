@@ -1,10 +1,11 @@
 {{ define "main" }}
 <div class="container-fluid vh-100">
-  <h1 class="display-4">{{.Title}}</h1>
+  <h1 class="display-4" onclick="showMap()">{{.Title}}</h1>
   <div class="row ">
-    <div class="col-sm-12  col-lg-10">
+    <div class="col-12 col-lg-10">
       <div class="row  ">
-        <div class="col-lg-2 col-sm-12">
+        <div class="col-lg-2 col-12 order-2 order-lg-1">
+          <h3>List of Booths</h3>
           <ul>
             {{range where .Site.RegularPages "Section" "eq" "booth"}}
             <li>
@@ -13,7 +14,7 @@
             {{end}}
           </ul>
         </div>
-        <div class="col-lg-10 ">
+        <div class="col-lg-10 order-1 order-lg-2">
           <div id="map">
             <noscript>
               <a href="booth">click here to go to the list of booths</a>
@@ -21,11 +22,14 @@
           </div>
           <div id="content" class="p-0 overflow-auto" style="display:none; min-height: 0"></div>
         </div>
+        <div class="col-lg-2 col-12 order-lg-3 invisable"></div>
+        <div class="col-12 col-lg-10  p-2 order-3 order-lg-4" id="sponsorRoot">
+        </div>
       </div>
     </div>
-    <div class="col-sm-12 col-lg-2 mb-5">
+    <div class="col-12 col-lg-2 mb-5">
       <h3>Featured Booths</h3>
-      <div role=button id="templateFeatured" class="card" style="display: none;">
+      <div id="templateFeatured" class="card pointer-cursor" style="display: none;">
         <img class="card-img-top">
         <h5 class="card-title"></h5>
       </div>
@@ -55,12 +59,21 @@
     },
     {{ end }}
   ]
+  sponcers = [
+    {{ range where .Site.RegularPages "Section" "==" "sponsors" }}
+    {
+      name: "{{.Page.Title |safeJS }}",
+      image: "{{.Page.Params.image | safeJS }}",
+      link: "{{.Page.Params.externalLink | safeJS }}"
+    },
+    {{end}}
+  ]
 </script>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
   crossorigin="" />
-<!--yes i know this is bad practice -->
+
 {{$mainImage := resources.Get "images/each.png" }}
 {{$mainImage = $mainImage.RelPermalink }}
 {{ $mainJs := resources.Get "js/main.js"| js.Build (dict "minify" false "params" (dict "image" $mainImage) "sourceMap" "inline") }}

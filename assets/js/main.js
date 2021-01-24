@@ -55,7 +55,7 @@ if (window.location.hash) {
   } else {
     loadPage(window.location.hash.substr(1))
     console.log(`loaded ${window.location.hash.substr(1)}`)
-    window.history.replaceState(store.State, null, `#${window.location.hash.substr(1)}`)
+    window.history.replaceState(store.State, undefined, `#${window.location.hash.substr(1)}`)
   }
 }
 
@@ -66,7 +66,7 @@ utils.shuffleArray(filtered)
 for (let i = 0; i < Math.min(3, filtered.length); i++) {
   let clone = featuredTemplate.cloneNode(true)
 
-  clone.id = null
+  clone.id = undefined
   let nodes = Array.from(clone.childNodes)
   let img = nodes.find(elm => elm.nodeName == "IMG")
   img.src = filtered[i].img
@@ -74,7 +74,28 @@ for (let i = 0; i < Math.min(3, filtered.length); i++) {
   let text = nodes.find(elm => elm.nodeName == "H5")
   text.innerText = filtered[i].name
 
-  clone.onClick = utils.loadPage(filtered[i].url)
+  clone.addEventListener('click', () => { utils.loadPage(filtered[i].link) })
   clone.style.display = "Block"
   featuredTemplate.parentNode.append(clone)
 }
+
+
+let currSponcer = 0
+let sponsorRoot = document.getElementById('sponsorRoot')
+function nextSponcer() {
+  currSponcer++
+  if (currSponcer >= sponcers.length) {
+    currSponcer = 0
+  }
+  let embed = document.createElement('img')
+  embed.src = sponcers[currSponcer].image
+  embed.classList.add("img-fluid")
+  let anchor = document.createElement('a')
+  anchor.href = sponcers[currSponcer].link
+  anchor.append(embed)
+  sponsorRoot.childNodes.forEach(elm => { elm.remove() })
+  sponsorRoot.append(anchor)
+}
+nextSponcer()
+
+setInterval(nextSponcer, 30 * 60 * 1000) // every 30 seconds
