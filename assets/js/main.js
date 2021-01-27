@@ -88,6 +88,7 @@ function nextSponcer() {
     currSponcer = 0
   }
   let embed = document.createElement('img')
+  embed.alt = `the ${eventTitle} is proudly sponsered by ${sponcers[currSponcer].title}`
   embed.src = sponcers[currSponcer].image
   embed.classList.add("img-fluid")
   let anchor = document.createElement('a')

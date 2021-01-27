@@ -49,6 +49,7 @@
 </style>
 
 <script>
+  eventTitle = "{{.Title | safeJS}}"
   locations = [
     {{ range where .Site.RegularPages  "Section"  "==" "booth" }}
     {
@@ -65,7 +66,7 @@
   sponcers = [
     {{ range where .Site.RegularPages "Section" "==" "sponsors" }}
     {
-      name: "{{.Page.Title |safeJS }}",
+      title: "{{.Page.Title |safeJS }}",
       image: "{{.Page.Params.image | safeJS }}",
       link: "{{.Page.Params.externalLink | safeJS }}"
     },
