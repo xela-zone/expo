@@ -27,7 +27,7 @@ locations.forEach(location => {
   console.log(`adding ${location.name}..`)
   let rect = L.rectangle(utils.pointToBox(location.coords), { color: utils.stringToColor(location.name) })
   rect.on("click", () => { utils.loadPage(location.link) })
-  rect.bindTooltip(location.name, { permanent: true, direction: 'top' }).addTo(booths)
+  rect.bindTooltip(location.name, { permanent: true, direction: location.coords[1] % 2 ? 'bottom' : 'top' }).addTo(booths)
   L.imageOverlay(params.image, rect.getBounds()).addTo(images)
 })
 
