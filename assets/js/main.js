@@ -5,10 +5,6 @@ import * as utils from "./utils.js"
 import store from "./store.js"
 
 
-console.log(params)
-console.log(locations)
-console.log(locations.length)
-
 let map = L.map('map', {
   crs: L.CRS.Simple,
   minZoom: -1,
@@ -24,7 +20,7 @@ let map = L.map('map', {
 let booths = L.featureGroup()
 let images = L.featureGroup()
 locations.forEach(location => {
-  console.log(`adding ${location.name}..`)
+  console.log(`adding ${location.name} at ${location.coords}..`)
   let rect = L.rectangle(utils.pointToBox(location.coords), { color: utils.stringToColor(location.name) })
   rect.on("click", () => { utils.loadPage(location.link) })
   rect.bindTooltip(location.name, { permanent: true, direction: location.coords[1] % 2 ? 'bottom' : 'top' }).addTo(booths)
@@ -82,6 +78,7 @@ for (let i = 0; i < Math.min(3, filtered.length); i++) {
 
 let currSponcer = 0
 let sponsorRoot = document.getElementById('sponsorRoot')
+console.log(sponcers)
 function nextSponcer() {
   currSponcer++
   if (currSponcer >= sponcers.length) {
@@ -92,7 +89,7 @@ function nextSponcer() {
   embed.src = sponcers[currSponcer].image
   embed.classList.add("img-fluid")
   let anchor = document.createElement('a')
-  anchor.href = sponcers[currSponcer].link
+  anchor.addEventListener('click', () => { utils.loadPage(location.link) })
   anchor.append(embed)
   sponsorRoot.childNodes.forEach(elm => { elm.remove() })
   sponsorRoot.append(anchor)
