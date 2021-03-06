@@ -1,5 +1,5 @@
 ---
-title: "CWE"
+title: "Cottonwood Creek Action School"
 coords: "[0,3]"
 embeds: 
     - url: "6F2sovjiZzo"
