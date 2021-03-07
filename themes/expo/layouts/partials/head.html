@@ -5,15 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+    crossorigin="anonymous"
+  >
 
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     #title {
-      font-family: 'Bebas Neue', cursive;
+      font-family: 'Bebas Neue', sans-serif;
     }
-    
+
+    @font-face {
+      font-family: nobel light;
+      src: url('{{.Site.BaseURL}}/fonts/nobel-light.ttf');
+    }
+
+    .pointer-cursor {
+      cursor:pointer;
+    }
+
+    .subheading {
+      font-family: 'Nobel light';
+    }
+
+    body { 
+      font-family: 'Verdana';
+    }
   </style>
 
   {{ range .AlternativeOutputFormats -}}

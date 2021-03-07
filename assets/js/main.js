@@ -57,7 +57,7 @@ if (window.location.hash) {
 
 let featuredTemplate = document.getElementById('templateFeatured')
 
-let filtered = locations.filter(e => e.hasOwnProperty('img'))
+let filtered = locations.filter(e => e.hasOwnProperty('img') && e.type == "booth")
 utils.shuffleArray(filtered)
 for (let i = 0; i < Math.min(3, filtered.length); i++) {
   let clone = featuredTemplate.cloneNode(true)
@@ -87,9 +87,12 @@ function nextSponcer() {
   let embed = document.createElement('img')
   embed.alt = `the ${eventTitle} is proudly sponsered by ${sponcers[currSponcer].title}`
   embed.src = sponcers[currSponcer].image
+  embed.addEventListener('click', () => { utils.loadPage(sponcers[currSponcer].link) })
+  embed.classList.add('pointer-cursor')
+
   embed.classList.add("img-fluid")
-  let anchor = document.createElement('a')
-  anchor.addEventListener('click', () => { utils.loadPage(location.link) })
+  let anchor = document.createElement('div')
+
   anchor.append(embed)
   sponsorRoot.childNodes.forEach(elm => { elm.remove() })
   sponsorRoot.append(anchor)

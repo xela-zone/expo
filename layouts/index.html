@@ -5,7 +5,7 @@
     <div class="col-12 col-lg-10">
       <div class="row">
         <div class="col-lg-2 col-12 order-2 order-lg-1">
-          <h3>List of Booths</h3>
+          <h3 class="subheading">List of Booths</h3>
           <ul>
             {{range where .Site.RegularPages "Section" "eq" "booth"}}
             <li>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="col-12 col-lg-2 mb-5">
-      <h3>Featured Booths</h3>
+      <h3 class="subheading">Featured Booths</h3>
       <div id="templateFeatured" class="card pointer-cursor" style="display: none;">
         <img class="card-img-top">
         <h5 class="card-title"></h5>
@@ -56,9 +56,10 @@
 <script>
   eventTitle = "{{.Title | safeJS}}"
   locations = [
-    {{ range where .Site.RegularPages  "Section"  "==" "booth" }}
+    {{ range where .Site.RegularPages  "Section"  "in" (slice "booth" "sponsors") }}
     {
       name: "{{.Page.Title | safeJS}}",
+      type: "{{.Page.Section | safeJS}}",
       link: "{{.Page.RelPermalink | safeJS }}",
       coords: {{.Page.Params.coords | safeJS }},
     {{ range first 1 (where .Params.embeds "type" "eq" "image") }}
