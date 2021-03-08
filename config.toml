@@ -1,4 +1,4 @@
-baseURL = "https://alext.duckdns.org/expo/"
+baseURL = "/expo/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = 'expo'
