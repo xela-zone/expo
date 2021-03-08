@@ -44,6 +44,7 @@ async function _loadPage(url) {
     contentRoot.innerHTML = await page.text()
     contentRoot.style.display = "block"
     map.style.display = "none"
+    window.scrollTo(0, 0);
   } else {
     store.commit('page', '/')
   }
