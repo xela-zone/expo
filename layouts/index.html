@@ -1,7 +1,9 @@
 {{ define "main" }}
 <div class="container-fluid vh-100">
-  <h1 class="display-4" id="title" onclick="showMap()">{{.Title}}</h1>
   <div class="row ">
+    <div class="col-12" style="background-color: #2e56a5;">
+        <img class="img-fluid" style="max-height: 150px;" src="images/banner.png" alt="">
+      </div>
     <div class="col-12 col-lg-10">
       <div class="row">
         <div class="col-lg-3 col-12 order-2 order-lg-1">
@@ -77,9 +79,11 @@
       type: "{{.Page.Section | safeJS}}",
       link: "{{.Page.RelPermalink | safeJS }}",
       coords: {{.Page.Params.coords | safeJS }},
-    {{ range first 1 (where .Params.embeds "type" "eq" "image") }}
+    {{ with .Params.embeds }}
+    {{ range first 1 (where . "type" "eq" "image") }}
     img: "{{.url | safeJS}}",
     alt: "{{.alt | safeJS}}"
+      {{ end }}
       {{ end }}
     },
     {{ end }}

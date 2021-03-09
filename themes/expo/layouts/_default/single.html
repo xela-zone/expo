@@ -34,10 +34,12 @@
         </a>
       </div>
       {{end}}
-    {{end}}
 
   </div>
   <div class="col-lg-5 col-12" >
+  {{else}}
+  <div class="col-12" >
+  {{end}}
     <h2>{{.Params.Title}}</h2>
     <div class="overflow-auto" id="article-content">
       <p>{{ .Content}}</p>
@@ -51,15 +53,15 @@
     </div>
     <div class="col-3 gap-2">
 
-      {{ with .NextInSection }}
-      <button type="button" class="btn btn-secondary btn-sm" onclick="loadPage('{{.RelPermalink | safeJS}}')">next
+      {{ with .PrevInSection }}
+      <button type="button" class="btn btn-secondary btn-sm" onclick="loadPage('{{.RelPermalink | safeJS}}')">Previous
         Booth</button>
       {{end}}
     </div>
     <div class="col-3 gap-2">
 
-      {{ with .PrevInSection }}
-      <button type="button" class="btn btn-secondary btn-sm" onclick="loadPage('{{.RelPermalink | safeJS}}')">Previous
+      {{ with .NextInSection }}
+      <button type="button" class="btn btn-secondary btn-sm" onclick="loadPage('{{.RelPermalink | safeJS}}')">Next
         Booth</button>
       {{end}}
     <!-- </div> -->
