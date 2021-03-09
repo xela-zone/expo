@@ -1,6 +1,6 @@
 ---
 title: "Colony High Digital Media"
-coords: "[0,1]"
+coords: "[1,3]"
 embeds: 
     - url: "zNTaVTMoNTk"
       type: 'yt'
