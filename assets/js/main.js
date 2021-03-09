@@ -24,7 +24,12 @@ locations.forEach(location => {
   let rect = L.rectangle(utils.pointToBox(location.coords), { color: utils.stringToColor(location.name) })
   rect.on("click", () => { utils.loadPage(location.link) })
   rect.bindTooltip(location.name, { permanent: true, direction: location.coords[1] % 2 ? 'bottom' : 'top' }).addTo(booths)
-  L.imageOverlay(params.image, rect.getBounds()).addTo(images)
+  if (location.img) {
+    L.imageOverlay(location.img, rect.getBounds()).addTo(images)
+  } else {
+    L.imageOverlay(params.image, rect.getBounds()).addTo(images)
+
+  }
 })
 
 
@@ -59,7 +64,7 @@ let featuredTemplate = document.getElementById('templateFeatured')
 
 let filtered = locations.filter(e => e.hasOwnProperty('img') && e.type == "booth")
 utils.shuffleArray(filtered)
-for (let i = 0; i < Math.min(3, filtered.length); i++) {
+for (let i = 0; i < Math.min(3, filtered.length); i++) {  // the number of featured booths to display is here
   let clone = featuredTemplate.cloneNode(true)
 
   clone.id = undefined
