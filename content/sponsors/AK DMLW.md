@@ -1,6 +1,6 @@
 ---
 title: "Alaska Division of Mining, Land and Water"
-coords: "[-1,2]"
+coords: "[0,5]"
 image: 'images/DMLWLogo.jpg'
 embeds: 
     - url: "images/DMLWLogo.jpg"

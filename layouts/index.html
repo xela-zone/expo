@@ -82,6 +82,7 @@
       type: "{{.Page.Section | safeJS}}",
       link: "{{.Page.RelPermalink | safeJS }}",
       coords: {{.Page.Params.coords | safeJS }},
+      wide: {{default false .Page.Params.wide | safeJS}},
     {{ with .Params.embeds }}
     {{ range first 1 (where . "type" "eq" "image") }}
     img: "{{.url | safeJS}}",

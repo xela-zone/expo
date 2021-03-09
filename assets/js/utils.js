@@ -22,8 +22,9 @@ function shuffleArray(array) {
 }
 
 
-function pointToBox(coords, size = .49) {
-  return [[coords[0] - size, coords[1] - size], [coords[0] + size, coords[1] + size]]
+function pointToBox(coords, wide = false, size = .49,) {
+  let width = wide ? size * 3 : size
+  return [[coords[0] - size, coords[1] - size], [coords[0] + size, coords[1] + width]]
 }
 
 

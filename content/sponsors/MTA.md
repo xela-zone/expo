@@ -1,7 +1,8 @@
 ---
 title: "MTA"
-coords: "[-1,4]"
+coords: "[0,3]"
 image: 'images/mtaLogo.png'
+wide: true
 embeds: 
     - url: "images/mtaLogo.png"
       type: 'image'

@@ -21,9 +21,9 @@ let booths = L.featureGroup()
 let images = L.featureGroup()
 locations.forEach(location => {
   console.log(`adding ${location.name} at ${location.coords}..`)
-  let rect = L.rectangle(utils.pointToBox(location.coords), { color: utils.stringToColor(location.name) })
+  let rect = L.rectangle(utils.pointToBox(location.coords, location.wide), { color: utils.stringToColor(location.name) })
   rect.on("click", () => { utils.loadPage(location.link) })
-  rect.bindTooltip(location.name, { permanent: true, direction: location.coords[1] % 2 ? 'bottom' : 'top' }).addTo(booths)
+  rect.bindTooltip(location.name, { permanent: location.img ? false : true, direction: location.coords[1] % 2 ? 'bottom' : 'top' }).addTo(booths)
   if (location.img) {
     L.imageOverlay(location.img, rect.getBounds()).addTo(images)
   } else {

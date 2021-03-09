@@ -2,6 +2,7 @@
 title: "Northriver IT"
 coords: "[-1,1]"
 image: 'images/northriverLogo.png'
+wide: true
 embeds: 
     - url: "images/northriverLogo.png"
       type: 'image'

@@ -1,7 +1,8 @@
 ---
 title: "Structured"
-coords: "[-1,5]"
+coords: "[-1,4]"
 image: 'images/structuredLogo.jpg'
+wide: true
 embeds: 
     - url: "images/structuredLogo.jpg"
       type: 'image'
