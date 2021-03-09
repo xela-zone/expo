@@ -1,9 +1,16 @@
 {{ define "main" }}
 <div class="container-fluid vh-100">
-  <div class="row ">
+  <div class="row">
     <div class="col-12" style="background-color: #2e56a5;">
-        <img class="img-fluid" style="max-height: 150px;" src="images/banner.png" alt="">
+      <div class="row" style="justify-content: space-between;">
+        <div class="col-6 p-0" style="max-height: 150px;">
+          <img class="img-fluid" src="images/MSBSD.png" alt="">
+        </div>
+        <div class="col-6 p-0" style="max-height: 150px;">
+          <img class="img-fluid"  src="images/techExpo.png" alt="">
+        </div>
       </div>
+    </div>
     <div class="col-12 col-lg-10">
       <div class="row">
         <div class="col-lg-3 col-12 order-2 order-lg-1">
@@ -38,11 +45,12 @@
           </div>
           <div id="content" style="display:none; min-height: 0"></div>
         </div>
-        <div class="col-12 p-2 order-4 order-lg-3" id="sponsorRoot">
-        </div>
+        
       </div>
     </div>
     <div class="col-12 col-lg-2 mb-5">
+      <div id="sponsorRoot">
+      </div>
       <h3 class="subheading">Featured Booths</h3>
       <div id="templateFeatured" class="card pointer-cursor" style="display: none;">
         <img class="card-img-top">

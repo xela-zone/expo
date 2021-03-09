@@ -90,6 +90,7 @@ function nextSponcer() {
   embed.src = sponcers[currSponcer].image
   embed.addEventListener('click', () => { utils.loadPage(sponcers[currSponcer].link) })
   embed.classList.add('pointer-cursor')
+  embed.classList.add('img-fluid')
   embed.classList.add('max-height-200')
   let anchor = document.createElement('div')
 
