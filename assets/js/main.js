@@ -106,3 +106,13 @@ function nextSponcer() {
 nextSponcer()
 
 setInterval(nextSponcer, 30 * 60 * 1000) // every 30 seconds
+
+
+// check localstorage exists?
+if (window.localStorage) {
+  let ls = window.localStorage
+  if (ls.getItem("loaded") == null) {
+    utils.loadPage(mainPageRoute)
+    ls.setItem("loaded", "true")
+  }
+}
