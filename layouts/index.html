@@ -44,7 +44,9 @@
               <a href="booth">click here to go to the list of booths</a>
             </noscript>
           </div>
-          <div id="content" style="display:none; min-height: 0"></div>
+          <div id="content" style="display:none; min-height: 0">
+          
+          </div>
         </div>
         
       </div>
@@ -76,7 +78,8 @@
 <script>
   eventTitle = "{{.Title | safeJS}}"
   locations = [
-    {{ range where .Site.RegularPages  "Section"  "in" (slice "booth" "sponsors") }}
+
+    {{ range where .Site.Pages  "Params.coords" "!=" nil }}
     {
       name: "{{.Page.Title | safeJS}}",
       type: "{{.Page.Section | safeJS}}",
