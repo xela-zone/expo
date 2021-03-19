@@ -49,16 +49,32 @@ map.on("zoomend", e => {
 });
 
 
+function loadInitPage() {
+  if (window.localStorage) {
+    let ls = window.localStorage
+    if (ls.getItem("loaded") == null) {
+      utils.loadPage(mainPageRoute)
+      ls.setItem("loaded", "true")
+    } else {
+      window.history.replaceState(store.State, 'Home Page', '#')
+    }
+  }
+}
 //  init code for page, will reload the base if no # in url, otherwise use # route to preload the state
 if (window.location.hash) {
   if (window.location.hash == "#") {
-    window.history.replaceState(store.State, 'Home Page', '#')
+    // check localstorage exists?
+    loadInitPage()
   } else {
+
     loadPage(window.location.hash.substr(1))
     console.log(`loaded ${window.location.hash.substr(1)}`)
     window.history.replaceState(store.State, undefined, `#${window.location.hash.substr(1)}`)
   }
+} else {
+  loadInitPage()
 }
+
 
 let featuredTemplate = document.getElementById('templateFeatured')
 
@@ -108,11 +124,3 @@ nextSponcer()
 setInterval(nextSponcer, 30 * 60 * 1000) // every 30 seconds
 
 
-// check localstorage exists?
-if (window.localStorage) {
-  let ls = window.localStorage
-  if (ls.getItem("loaded") == null) {
-    utils.loadPage(mainPageRoute)
-    ls.setItem("loaded", "true")
-  }
-}
