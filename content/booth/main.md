@@ -5,7 +5,7 @@ embeds:
       type: 'yt'
 ---
 
-On the left, you'll find the list of booths and sponcers. at the bottom, there's a button to return to the map of booths.
+On the left, you'll find the list of booths and sponsors. At the bottom there is a button to return to the map of booths.
 
 
-We hope you'll enjoy your time at the tech Expo! 
+We hope you'll enjoy your time at the Mat-Su Tech Expo! 
