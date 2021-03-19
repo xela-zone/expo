@@ -7,6 +7,21 @@ embeds:
     - url: "images/structuredLogo.jpg"
       type: 'image'
       alt: "Structured bringing people, business & technology"
+    - url: "images/structured/2nd_grade_worksheet.png"
+      type: 'image'
+      alt: "a worksheet for 2nd grade. is a color by numbers sheet."
+
+    - url: "images/structured/3rd_grade_worksheet.png"
+      type: 'image'
+      alt: "a worksheet for 3rd grade. at the top is a crossword, and the bottom is a maze."
+
+    - url: "images/structured/4-5th_decode_sheet.png"
+      type: 'image'
+      alt: "a worksheet for 4th and 5th grade. there are letters corisponding tonumbers at the top, and blank spaces with numbers in the middle of the screen."
+
+    - url: "images/structured/4-5th_worksheet.png"
+      type: 'image'
+      alt: "a worksheet for 4th and 5th grade. the top section wants you to unscramble some words. the bottom section wants you to answer 3 questions realted to computer security."
 
 ---
 

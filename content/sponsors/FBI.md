@@ -1,7 +1,7 @@
 ---
 title: "FBI"
 coords: "[-1,3]"
-image: 'images/missing.png'
+image: 'images/FBILogo.png'
 embeds: 
     - url: "d4NSfrOtMfU"
       type: 'yt'
