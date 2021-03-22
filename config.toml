@@ -1,4 +1,4 @@
-baseURL = "www.msbsdtechexpo.com/"
+baseURL = "msbsdtechexpo.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = 'expo'
