@@ -1,5 +1,5 @@
 ---
-title: "Sherod Elemenetry Sphero-bots"
+title: "Sherrod Elemenetry Sphero-bots"
 coords: "[3,1]"
 embeds: 
 

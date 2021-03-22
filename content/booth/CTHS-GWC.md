@@ -1,5 +1,5 @@
 ---
-title: "CTHS business"
+title: "CTHS Girls Who Code"
 coords: "[2,2]"
 embeds: 
 

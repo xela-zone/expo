@@ -1,5 +1,5 @@
 ---
-title: "Sherod Elemenetry Makey Makeys"
+title: "Sherrod Elemenetry Makey Makeys"
 coords: "[3,0]"
 embeds: 
 

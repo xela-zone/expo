@@ -1,5 +1,5 @@
 ---
-title: "American Charter"
+title: "American Charter Academy"
 coords: "[1,1]"
 embeds: 
 

@@ -1,5 +1,5 @@
 ---
-title: "Wasilla High School"
+title: "Wasilla High School Media"
 coords: "[1,2]"
 embeds: 
     # - url: "H2msLM7249k"
