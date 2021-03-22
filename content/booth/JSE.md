@@ -6,4 +6,4 @@ embeds:
       type: 'yt'
 ---
 
-Video clips and pictures of the girls' projects.
+Cottonwood Creek Elementary students use technology for a variety of projects.  In our first virtual booth, students share their work with a student-produced virtual "newsletter. 
