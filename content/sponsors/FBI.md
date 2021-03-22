@@ -4,8 +4,8 @@ coords: "[-1,3]"
 image: 'images/FBILogo.png'
 embeds: 
     - url: 'images/FBILogo.png'
-     type: 'image'
-     alt: 'The FBI Logo'
+      type: 'image'
+      alt: 'The FBI Logo'
 
     - url: "d4NSfrOtMfU"
       type: 'yt'
