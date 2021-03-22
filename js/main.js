@@ -7789,7 +7789,7 @@
   });
 
   // ns-params:@params
-  var image = "/expo/images/each.png";
+  var image = "/images/each.png";
 
   // js/main.js
   var leaflet = __toModule(require_leaflet_src());
