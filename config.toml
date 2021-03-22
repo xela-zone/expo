@@ -1,4 +1,4 @@
-baseURL = "https://mralext20.github.io/expo/"
+baseURL = "msbsdtechexpo.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = 'expo'
