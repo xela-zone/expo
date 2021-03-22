@@ -77,7 +77,7 @@
 
 <script>
   eventTitle = "{{.Title | safeJS}}"
-  {{ with .Site.GetPage "/booth/main.md" }}
+  {{ with .Site.GetPage "/main.md" }}
   mainPageRoute = "{{ .Page.RelPermalink }}"
   {{ end }}
   locations = [
