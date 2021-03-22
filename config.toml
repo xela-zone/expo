@@ -1,4 +1,4 @@
-baseURL = "msbsdtechexpo.com/"
+baseURL = "https://msbsdtechexpo.com/"
 languageCode = "en-us"
 title = "Mat-Su Tech Expo 2021"
 theme = 'expo'
