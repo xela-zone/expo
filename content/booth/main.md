@@ -9,3 +9,6 @@ On the left, you'll find the list of booths and sponsors. At the bottom there is
 
 
 We hope you'll enjoy your time at the Mat-Su Tech Expo! 
+
+
+{{< welcome-logo >}}
