@@ -1,5 +1,5 @@
 ---
-title: "CTHS CAD/Robiotics"
+title: "CTHS CAD/Robotics"
 coords: "[2,3]"
 embeds: 
 
