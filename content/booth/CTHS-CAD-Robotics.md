@@ -5,4 +5,4 @@ embeds:
 
 ---
 
-3D Modeling/Printing & CNC, robotics
+3D Modeling/Printing & CNC, robotics.  Video will be available soon!
