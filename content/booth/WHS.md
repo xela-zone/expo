@@ -6,4 +6,4 @@ embeds:
     #   type: 'yt'
 ---
 
-Digital Media 
+Digital Media program at WHS.  Video will be available soon!
