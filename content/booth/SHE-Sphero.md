@@ -5,4 +5,4 @@ embeds:
 
 ---
 
-Either Sphero-bots in the classroom, or digital citizenship
+Either Sphero-bots in the classroom, or digital citizenship.  Video will be available soon!
