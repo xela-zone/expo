@@ -5,4 +5,4 @@ embeds:
 
 ---
 
-Students using 3D software to design and print blades to test in a windmill challenge. We will do our own video recording and editing.
+Students using 3D software to design and print blades to test in a windmill challenge. Video will be available soon!
