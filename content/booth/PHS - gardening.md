@@ -7,4 +7,4 @@ embeds:
     #   alt: "a dog"
 ---
 
-Hydroponics system, Aquaponics, Composting, Vet Science Tools
+Hydroponics system, Aquaponics, Composting, Vet Science Tools.  Video will be available soon!
