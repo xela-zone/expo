@@ -5,4 +5,4 @@ embeds:
 
 ---
 
-Pictures or video of our club.
+Video will be available soon!
