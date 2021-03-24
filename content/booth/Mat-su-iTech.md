@@ -6,4 +6,4 @@ embeds:
 
 ---
 
-iTech Program unique opportunities: focus on eDynamic Learning
+iTech Program unique opportunities: focus on eDynamic Learning.  Video will be available soon!
