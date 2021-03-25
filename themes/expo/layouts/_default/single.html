@@ -8,7 +8,7 @@
         {{if eq .type "image"}}
         <div class="carousel-item {{if eq $times 0}}active{{end}}">
           {{$times = add $times 1}}
-          <img src="{{ .url }}" alt="{{.alt}}" class="d-block w-100">
+          <img src="{{ .url }}" alt="{{.alt}}" class="d-block w-25">
         </div>
         {{ else if eq .type "yt"}}
         <div class="carousel-item {{if eq $times 0}}active{{end}}">
@@ -49,7 +49,7 @@
 
     <div class="col-6  gap-2">
 
-      <button type="button" class="btn btn-primary btn-sm" onclick="showMap()">back to map</button>
+      <button type="button" class="btn btn-primary btn-sm" onclick="showMap()"><span class="d-none d-lg-inline">Back to Map</span><span class="d-inline d-lg-none">Close Content</span></button>
     </div>
     <div class="col-3 gap-2">
 
