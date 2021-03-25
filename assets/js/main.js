@@ -5,6 +5,9 @@ import * as utils from "./utils.js"
 import store from "./store.js"
 
 
+let config = { numFeatured: 2 }
+
+
 let map = L.map('map', {
   crs: L.CRS.Simple,
   minZoom: -1,
@@ -80,7 +83,7 @@ let featuredTemplate = document.getElementById('templateFeatured')
 
 let filtered = locations.filter(e => e.hasOwnProperty('img') && e.type == "booth")
 utils.shuffleArray(filtered)
-for (let i = 0; i < Math.min(3, filtered.length); i++) {  // the number of featured booths to display is here
+for (let i = 0; i < Math.min(config.numFeatured, filtered.length); i++) {  // the number of featured booths to display is here
   let clone = featuredTemplate.cloneNode(true)
 
   clone.id = undefined
