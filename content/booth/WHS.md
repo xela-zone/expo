@@ -2,8 +2,9 @@
 title: "Wasilla High School Media"
 coords: "[1,2]"
 embeds: 
-    # - url: "H2msLM7249k"
-    #   type: 'yt'
+    - url: "images/schoolLogos/WHS.webp"
+      type: 'image'
+      alt: "Wasilla High School Logo"
 ---
 
 Digital Media program at WHS.  Video will be available soon!
