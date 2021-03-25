@@ -8,7 +8,7 @@
         {{if eq .type "image"}}
         <div class="carousel-item {{if eq $times 0}}active{{end}}">
           {{$times = add $times 1}}
-          <img src="{{ .url }}" alt="{{.alt}}" class="d-block w-25">
+            <img src="{{ .url }}" alt="{{.alt}}" onclick="window.open(this.src)" class="d-block mx-auto w-75 pointer-cursor">
         </div>
         {{ else if eq .type "yt"}}
         <div class="carousel-item {{if eq $times 0}}active{{end}}">
