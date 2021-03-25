@@ -11,4 +11,4 @@ embeds:
 ---
 
 
-you can find Alaska Division of mining, Land and Water website [here](http://dnr.alaska.gov/mlw/)
+You can find Alaska Division of mining, Land and Water website [here](http://dnr.alaska.gov/mlw/)

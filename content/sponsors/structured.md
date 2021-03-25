@@ -36,4 +36,4 @@ To meet competitive demands and maintain relevancy in their own markets, our cus
 Throughout this transformational journey, they rely on us to provide design guidance, engineering assistance, and product recommendations that adhere to industry best practices, boost ROI, and – most importantly – maximize information security.
 
 
-you can find Structured's website [here](https://structured.com/)
+You can find Structured's website [here](https://structured.com/)
