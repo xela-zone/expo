@@ -58,7 +58,7 @@
       </div>
       <h3 class="subheading">Featured Booths</h3>
       <div id="templateFeatured" class="card pointer-cursor" style="display: none;">
-        <img class="card-img-top">
+        <img class="card-img-top d-block w-50 mx-auto">
         <h5 class="card-title"></h5>
       </div>
     </div>
@@ -90,6 +90,7 @@
       type: "{{.Page.Section | safeJS}}",
       link: "{{.Page.RelPermalink | safeJS }}",
       coords: {{.Page.Params.coords | safeJS }},
+      logo: "{{default "" .Page.Params.logo | safeJS}}",
       wide: {{default false .Page.Params.wide | safeJS}},
     {{ with .Params.embeds }}
     {{ range first 1 (where . "type" "eq" "image") }}
@@ -104,7 +105,7 @@
     {{ range where .Site.RegularPages "Section" "==" "sponsors" }}
     {
       title: "{{.Page.Title |safeJS }}",
-      image: "{{.Page.Params.image | safeJS }}",
+      image: "{{.Page.Params.logo | safeJS }}",
       coords: {{.Page.Params.coords | safeJS }},
     },
     {{end}}

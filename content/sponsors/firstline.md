@@ -1,12 +1,8 @@
 ---
 title: "Firstline"
 coords: "[-1,0]"
-image: 'images/FirstlineLogo.png'
-embeds: 
-    - url: "images/FirstlineLogo.png"
-      type: 'image'
-      alt: "Firstline voice And Data Networks"
-
+logo: 'images/FirstlineLogo.png'
+embeds:
 ---
 
 ## Experience & Leadership

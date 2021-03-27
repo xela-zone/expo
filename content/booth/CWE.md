@@ -1,12 +1,10 @@
 ---
 title: "Cottonwood Creek Elementry"
 coords: "[1,4]"
+logo: "images/schoolLogos/CWE.webp"
 embeds: 
     - url: "W6hxW4bB4eE"
       type: 'yt'
-    - url: "images/schoolLogos/CWE.webp"
-      type: 'image'
-      alt: "Cottonwood Creek Elemetry School Logo"
 ---
 
 Video newsletter from students to keep parents better connected during the age of mitigation plans.

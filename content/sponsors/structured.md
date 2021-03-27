@@ -1,12 +1,9 @@
 ---
 title: "Structured"
 coords: "[-1,4]"
-image: 'images/structuredLogo.jpg'
+logo: 'images/structuredLogo.jpg'
 wide: true
 embeds: 
-    - url: "images/structuredLogo.jpg"
-      type: 'image'
-      alt: "Structured bringing people, business & technology"
     - url: "images/structured/2nd_grade_worksheet.png"
       type: 'image'
       alt: "a worksheet for 2nd grade. is a color by numbers sheet."

@@ -5,7 +5,7 @@ import * as utils from "./utils.js"
 import store from "./store.js"
 
 
-let config = { numFeatured: 2 }
+let config = { numFeatured: 3 }
 
 
 let map = L.map('map', {
@@ -26,9 +26,9 @@ locations.forEach(location => {
   console.log(`adding ${location.name} at ${location.coords}..`)
   let rect = L.rectangle(utils.pointToBox(location.coords, location.wide), { color: utils.stringToColor(location.name) })
   rect.on("click", () => { utils.loadPage(location.link) })
-  rect.bindTooltip(location.name, { permanent: location.img ? false : true, direction: location.coords[1] % 2 ? 'bottom' : 'top' }).addTo(booths)
-  if (location.img) {
-    L.imageOverlay(location.img, rect.getBounds()).addTo(images)
+  rect.bindTooltip(location.name, { permanent: location.logo ? false : true, direction: location.coords[1] % 2 ? 'bottom' : 'top' }).addTo(booths)
+  if (location.logo) {
+    L.imageOverlay(location.logo, rect.getBounds()).addTo(images)
   } else {
     L.imageOverlay(params.image, rect.getBounds()).addTo(images)
 
@@ -81,7 +81,7 @@ if (window.location.hash) {
 
 let featuredTemplate = document.getElementById('templateFeatured')
 
-let filtered = locations.filter(e => e.hasOwnProperty('img') && e.type == "booth")
+let filtered = locations.filter(e => e.hasOwnProperty('logo') && e.type == "booth")
 utils.shuffleArray(filtered)
 for (let i = 0; i < Math.min(config.numFeatured, filtered.length); i++) {  // the number of featured booths to display is here
   let clone = featuredTemplate.cloneNode(true)
@@ -89,8 +89,7 @@ for (let i = 0; i < Math.min(config.numFeatured, filtered.length); i++) {  // th
   clone.id = undefined
   let nodes = Array.from(clone.childNodes)
   let img = nodes.find(elm => elm.nodeName == "IMG")
-  img.src = filtered[i].img
-  img.alt = filtered[i].alt
+  img.src = filtered[i].logo
   let text = nodes.find(elm => elm.nodeName == "H5")
   text.innerText = filtered[i].name
 

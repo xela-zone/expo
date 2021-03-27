@@ -1,10 +1,8 @@
 ---
 title: "Shaw Elementry School"
 coords: "[3,2]"
+logo: "images/schoolLogos/JSE.webp"
 embeds: 
-    - url: "images/schoolLogos/JSE.webp"
-      type: 'image'
-      alt: "Shaw Elemetry School Logo"
 ---
 
 Video will be available soon!

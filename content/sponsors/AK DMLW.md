@@ -1,13 +1,8 @@
 ---
 title: "Alaska Division of Mining, Land and Water"
 coords: "[0,5]"
-image: 'images/DMLWLogo.jpg'
-embeds: 
-    - url: "images/DMLWLogo.jpg"
-      type: 'image'
-      alt: "Logo for Division of mining land and water"
-    
-
+logo: 'images/DMLWLogo.jpg'
+embeds:
 ---
 
 
