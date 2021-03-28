@@ -7,4 +7,5 @@ embeds:
       type: 'yt'
 ---
 
-Makey Makey Report Projects.  Video will be available soon!
+Mrs. Johnson’s Blended Academy class at Sherrod Elementary integrates technology and social studies with their “makey-makey” projects.  
+“I think the most exciting thing is that we can take whatever is happening in the world, including in science and social studies, and apply it to what is interesting to students.”  - Tara Johnson, Blended Academy teacher, Sherrod Elementary
