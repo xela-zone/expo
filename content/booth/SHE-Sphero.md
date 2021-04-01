@@ -1,5 +1,5 @@
 ---
-title: "Sherrod Elemenetry Sphero-bots"
+title: "Sherrod Elementary Sphero-bots"
 coords: "[3,1]"
 logo: "images/schoolLogos/SHE.webp"
 embeds: 
