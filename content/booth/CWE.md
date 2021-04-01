@@ -1,5 +1,5 @@
 ---
-title: "Cottonwood Creek Elementry"
+title: "Cottonwood Creek Elementary"
 coords: "[1,4]"
 logo: "images/schoolLogos/CWE.webp"
 embeds: 
