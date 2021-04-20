@@ -1,5 +1,5 @@
 ---
-title: "Mat-Su iTech"
+title: "Mat-Su iTech - Online Learning Options"
 coords: "[2,0]"
 logo: "images/schoolLogos/itech.webp"
 embeds:
