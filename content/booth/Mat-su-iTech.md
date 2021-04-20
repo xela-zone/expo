@@ -1,8 +1,10 @@
 ---
-title: "Mat-Su iTech"
+title: "Mat-Su iTech - Online Learning Options"
 coords: "[2,0]"
 logo: "images/schoolLogos/itech.webp"
-embeds: 
+embeds:
+    - url: "f1Gh-GygoDs"
+      type: 'yt'
 ---
 
-iTech Program unique opportunities: focus on eDynamic Learning.  Video will be available soon!
+iTech Online Learning is MSBSD’s district-wide program to provide online learning courses to high school students for credit. Whether you need an online course for acceleration, credit recovery, sports related absences, limited options at your school, or any other reason, school counselors can enroll you in an iTech Online Learning course.

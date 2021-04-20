@@ -1,5 +1,5 @@
 ---
-title: "CTHS CAD/Robotics"
+title: "Career & Technical High School (CTHS) -  CAD/Robotics"
 coords: "[2,3]"
 logo: "images/schoolLogos/CTHS.webp"
 embeds: 
