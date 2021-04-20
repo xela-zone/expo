@@ -1,5 +1,5 @@
 ---
-title: "Shaw Elementary School"
+title: "Shaw Elementary School - Girls Who Code"
 coords: "[3,2]"
 logo: "images/schoolLogos/JSE.webp"
 embeds: 
