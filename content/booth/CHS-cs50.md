@@ -1,5 +1,5 @@
 ---
-title: "CHS - CS50AP"
+title: "Colony High School - CS50AP"
 coords: "[0, 0]"
 logo: "images/schoolLogos/CHS.webp"
 embeds: 
