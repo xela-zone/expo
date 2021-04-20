@@ -1,5 +1,5 @@
 ---
-title: "Sherrod Elementary Makey Makey"
+title: "Sherrod Elementary - Makey Makey"
 coords: "[3,0]"
 logo: "images/schoolLogos/SHE.webp"
 embeds:
