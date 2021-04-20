@@ -1,5 +1,5 @@
 ---
-title: "American Charter Academy"
+title: "American Charter Academy - 3D Software and Windmill Challenge"
 coords: "[1,1]"
 logo: "images/schoolLogos/AMC.webp"
 embeds: 
