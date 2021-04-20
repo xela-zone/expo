@@ -1,5 +1,5 @@
 ---
-title: "Colony High Digital Media"
+title: "Colony High School - Digital Media"
 coords: "[1,3]"
 logo: "images/schoolLogos/CHS.webp"
 embeds: 
