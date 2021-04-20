@@ -1,5 +1,5 @@
 ---
-title: "Wasilla High School CTE Programs"
+title: "Wasilla High School - CTE Programs"
 coords: "[1,2]"
 logo: "images/schoolLogos/WHS.webp"
 embeds: 
