@@ -1,5 +1,5 @@
 ---
-title: "Cottonwood Creek Elementary"
+title: "Cottonwood Creek Elementary - Video Newsletter"
 coords: "[1,4]"
 logo: "images/schoolLogos/CWE.webp"
 embeds: 
