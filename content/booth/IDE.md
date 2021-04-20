@@ -1,5 +1,5 @@
 ---
-title: "Iditarod Elementary"
+title: "Iditarod Elementary - Student Lead Remote Community Nights"
 coords: "[3,5]"
 logo: "images/schoolLogos/IDE.webp"
 embeds: 
