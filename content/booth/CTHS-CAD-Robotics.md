@@ -4,8 +4,7 @@ coords: "[2,3]"
 logo: "images/schoolLogos/CTHS.webp"
 embeds:
     - url: "ycOKkVykhCI"
-      type: 'yt'embeds:
-embeds:
+      type: 'yt'
     - url: "9YBwHAsDnBw"
       type: 'yt'
 ---
